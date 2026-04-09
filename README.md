@@ -8,8 +8,8 @@ A production-grade, fully responsive React/Next.js wall calendar component with 
 
 ## 🎬 Demo
 
-- **Live Demo:** [View on Vercel](https://your-deployment-url.vercel.app) *(Update after deployment)*
-- **Video Walkthrough:** [Watch on Loom](https://loom.com/your-video) *(Add your recorded video)*
+- **Live Demo:** [View on Netlify](https://luma-calendar.netlify.app/)
+- **Video Walkthrough:** [Watch on Drive](https://drive.google.com/file/d/1u2V5KkWLqt7RmbZtAVw2pOyrDKTnPpTN/view?usp=sharing)
 
 ## ✨ Features
 
@@ -98,4 +98,5 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-**Built with ❤️ for the Frontend Engineering Challenge**
+**Built with ❤️ for the Frontend Engineering Challenge — and a lot of late-night debugging ☕  
+Looking forward to building cool things together!**
