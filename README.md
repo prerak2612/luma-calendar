@@ -97,6 +97,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 3. Test various screen sizes
 
 ---
-
-**Built with ❤️ for the Frontend Engineering Challenge — and a lot of late-night debugging ☕  
-Looking forward to building cool things together!**
+\
