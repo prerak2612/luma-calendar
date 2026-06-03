@@ -96,4 +96,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 3. Test various screen sizes
 
 ---
-\
+
