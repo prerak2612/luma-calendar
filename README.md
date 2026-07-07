@@ -1,6 +1,6 @@
 # 🗓️ Interactive Wall Calendar Component
 
-A production-grade, fully responsive React/Next.js wall calendar component with date range selection, tagged notes, and beautiful animations.
+A production-grade, fully responsive React/Next.js wall calendar component with date range selection, tagged notes, voice note creation, and beautiful animations.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)
@@ -16,10 +16,14 @@ A production-grade, fully responsive React/Next.js wall calendar component with 
 - ✅ **Wall Calendar Aesthetic** - Physical calendar look with spiral binding & hero images
 - ✅ **Day Range Selector** - Click to select start & end dates with visual states
 - ✅ **Integrated Notes** - Tagged notes (Work/Personal/Urgent) with CRUD operations
+- ✅ **Voice Note Creation** - Speak natural-language agenda items and convert them into editable notes
 - ✅ **Responsive Design** - Desktop grid → Mobile stack layout
 - ✅ **Data Persistence** - localStorage for notes & theme preferences
 
 ### Creative Extras 🚀
+- 🎤 **Voice Assistant** - Floating mic button with Web Speech API transcription
+- 🎙️ **Natural Language Parsing** - Extracts title, date, and time from phrases like "Meeting tomorrow at 5 PM"
+- ✨ **Premium Recording UI** - Frosted glass popup, glowing mic, pulsing rings, animated waveform, and success/error states
 - 🎨 **Dynamic Themes** - Each month has unique seasonal imagery & accent colors
 - ⌨️ **Keyboard Shortcuts** - Arrow keys, T for today, D for dark mode, Esc to clear
 - 🌙 **Dark/Light Mode** - Toggle with preference persistence
@@ -42,6 +46,7 @@ A production-grade, fully responsive React/Next.js wall calendar component with 
 - **Icons:** Lucide React
 - **Date Utils:** date-fns
 - **Holidays:** Nager public holiday API (+ fallback map)
+- **Voice Input:** Browser Web Speech API
 
 ## 🚀 Quick Start
 
@@ -58,6 +63,19 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🎤 Voice Notes
+
+Click the floating microphone button inside the Agenda note box and speak a reminder such as:
+
+- "Meeting tomorrow at 5 PM"
+- "Doctor appointment next Friday"
+- "Birthday on 20 July"
+- "Interview Monday at 10 AM"
+
+The recorder shows a live transcript, then extracts an editable title, date, and time. If the browser cannot determine a date or time, the field stays editable so you can complete it manually before adding the note.
+
+Voice input uses the browser SpeechRecognition API. Unsupported browsers and microphone permission errors are handled gracefully with an in-app message.
 
 ## ⌨️ Keyboard Shortcuts
 
@@ -76,7 +94,10 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 │   ├── layout.tsx       # Root layout with fonts
 │   └── page.tsx         # Home page
 ├── components/
-│   └── WallCalendar.tsx # Main calendar component
+│   ├── VoiceNoteRecorder.tsx   # Voice note recording UI
+│   ├── WallCalendar.tsx        # Main calendar component
+│   ├── useSpeechRecognition.ts # Web Speech API hook
+│   └── voiceNoteParser.ts      # Natural-language note parser
 ├── package.json
 └── README.md
 ```
@@ -88,6 +109,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 3. **localStorage Persistence** - Notes and color mode survive refresh/restart
 4. **Mobile-First Design** - Touch-optimized, then enhanced for desktop
 5. **Accessibility Priority** - Full ARIA support & keyboard navigation
+6. **Graceful Voice Enhancement** - Speech recognition upgrades note creation when supported without blocking manual entry
 
 ## 📱 Testing Responsive Design
 
@@ -96,4 +118,3 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 3. Test various screen sizes
 
 ---
-
