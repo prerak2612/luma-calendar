@@ -111,7 +111,7 @@ Voice input uses the browser SpeechRecognition API. Unsupported browsers and mic
 5. **Accessibility Priority** - Full ARIA support & keyboard navigation
 6. **Graceful Voice Enhancement** - Speech recognition upgrades note creation when supported without blocking manual entry
 
-## 📱 Testing Responsive Design
+## 📱Testing Responsive Design
 
 1. Open browser DevTools (F12)
 2. Toggle device toolbar (Ctrl+Shift+M)
